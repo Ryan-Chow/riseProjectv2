@@ -1,0 +1,1733 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Filters</title>
+    <link rel="stylesheet" href="/styles/filters.css">
+    <link href="https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="navbar__container">
+            <a href="/" id="navbar__logo">
+                <ion-icon name="body-outline"></ion-icon>
+                Volunteer League
+            </a>
+        </div>
+    </nav>
+
+    <div class="main">
+        <h1>Opportunity Filters</h1>
+        <p>Filter based on your skillset and what causes you support.</p>
+
+        <form id="filterForm">
+        <div class="causes">
+            <h2>What causes do you want to support?</h2>
+            <p>Select as many (or as little) as you want.</p>
+            <div class="cause-choice-container">
+                <div class="causes-column">
+                    <label class="cause-label">
+                        <input type="checkbox" class="cause-checkbox">
+                        Human Rights
+                    </label>
+                    <label class="cause-label">
+                        <input type="checkbox" class="cause-checkbox">
+                        Board Development
+                    </label>
+                    <label class="cause-label">
+                        <input type="checkbox" class="cause-checkbox">
+                        Technology
+                    </label>
+                    <label class="cause-label">
+                        <input type="checkbox" class="cause-checkbox">
+                        Education
+                    </label>
+                    <label class="cause-label">
+                        <input type="checkbox" class="cause-checkbox">
+                        Environment
+                    </label>
+                    <label class="cause-label">
+                        <input type="checkbox" class="cause-checkbox">
+                        Homelessness
+                    </label>
+                    <label class="cause-label">
+                        <input type="checkbox" class="cause-checkbox">
+                        International
+                    </label>
+                    <label class="cause-label">
+                        <input type="checkbox" class="cause-checkbox">
+                        Media
+                    </label>
+                    <label class="cause-label">
+                        <input type="checkbox" class="cause-checkbox">
+                        Race
+                    </label>
+                    <label class="cause-label">
+                        <input type="checkbox" class="cause-checkbox">
+                        Veterans
+                    </label>
+                </div>
+                <div class="causes-column">
+                    <label class="cause-label">
+                        <input type="checkbox" class="cause-checkbox">
+                        Animals
+                    </label>
+                    <label class="cause-label">
+                        <input type="checkbox" class="cause-checkbox">
+                        Children
+                    </label>
+                    <label class="cause-label">
+                        <input type="checkbox" class="cause-checkbox">
+                        Crisis Support
+                    </label>
+                    <label class="cause-label">
+                        <input type="checkbox" class="cause-checkbox">
+                        Emergency and Safety
+                    </label>
+                    <label class="cause-label">
+                        <input type="checkbox" class="cause-checkbox">
+                        Faith Based
+                    </label>
+                    <label class="cause-label">
+                        <input type="checkbox" class="cause-checkbox">
+                        Hunger
+                    </label>
+                    <label class="cause-label">
+                        <input type="checkbox" class="cause-checkbox">
+                        Legal
+                    </label>
+                    <label class="cause-label">
+                        <input type="checkbox" class="cause-checkbox">
+                        Disabled
+                    </label>
+                    <label class="cause-label">
+                        <input type="checkbox" class="cause-checkbox">
+                        Seniors
+                    </label>
+                    <label class="cause-label">
+                        <input type="checkbox" class="cause-checkbox">
+                        Women
+                    </label>
+                </div>
+                <div class="causes-column">
+                    <label class="cause-label">
+                        <input type="checkbox" class="cause-checkbox">
+                        Culture
+                    </label>
+                    <label class="cause-label">
+                        <input type="checkbox" class="cause-checkbox">
+                        Community
+                    </label>
+                    <label class="cause-label">
+                        <input type="checkbox" class="cause-checkbox">
+                        Disaster Relief
+                    </label>
+                    <label class="cause-label">
+                        <input type="checkbox" class="cause-checkbox">
+                        Employment
+                    </label>
+                    <label class="cause-label">
+                        <input type="checkbox" class="cause-checkbox">
+                        Health
+                    </label>
+                    <label class="cause-label">
+                        <input type="checkbox" class="cause-checkbox">
+                        Refugees
+                    </label>
+                    <label class="cause-label">
+                        <input type="checkbox" class="cause-checkbox">
+                        LGBTQ+
+                    </label>
+                    <label class="cause-label">
+                        <input type="checkbox" class="cause-checkbox">
+                        Politics
+                    </label>
+                    <label class="cause-label">
+                        <input type="checkbox" class="cause-checkbox">
+                        Recreation
+                    </label>
+                </div>
+            </div>
+        </div>
+
+        <div class="virtual-nonvirtual">
+            <h2>Do you prefer VIRTUAL or IN-PERSON opportunities?</h2>
+            <p>Select as many (or as little) as you want.</p>
+                <div class="virtual-nonvirtual-choice-container">
+                    <label class="virtual-label">
+                        <input type="checkbox" class="virtual-checkbox">
+                        Virtual (Online)
+                    </label>
+                    <label class="virtual-label">
+                        <input type="checkbox" class="virtual-checkbox">
+                        In-Person
+                    </label>
+                </div>
+        </div>
+
+        <div class="skills">
+            <h2>What skills do YOU want to bring to the table?</h2>
+            <p>Select as many (or as little) as you want.</p>
+
+            <div class="skills-choice-container">
+                <div class="skill-column-column">
+                    <div class="skill-column">
+                        <h3>Academics</h3>
+                        <label class="skill-label">
+                            <input type="checkbox" class="skill-checkbox">
+                            Anthropology
+                        </label>
+                        <label class="skill-label">
+                            <input type="checkbox" class="skill-checkbox">
+                            Archeology
+                        </label>
+                        <label class="skill-label">
+                            <input type="checkbox" class="skill-checkbox">
+                            Astronomy
+                        </label>
+                        <label class="skill-label">
+                            <input type="checkbox" class="skill-checkbox">
+                            Computer Science
+                        </label>
+                        <label class="skill-label">
+                            <input type="checkbox" class="skill-checkbox">
+                            Environmental Science
+                        </label>
+                        <label class="skill-label">
+                            <input type="checkbox" class="skill-checkbox">
+                            History
+                        </label>
+                        <label class="skill-label">
+                            <input type="checkbox" class="skill-checkbox">
+                            Library Sciences
+                        </label>
+                        <label class="skill-label">
+                            <input type="checkbox" class="skill-checkbox">
+                            Mathematics
+                        </label>
+                        <label class="skill-label">
+                            <input type="checkbox" class="skill-checkbox">
+                            Music Theory
+                        </label>
+                        <label class="skill-label">
+                            <input type="checkbox" class="skill-checkbox">
+                            Research
+                        </label>
+                    </div>
+                    <div class="skill-column">
+                        <h3>Arts</h3>
+                        <label class="skill-label">
+                            <input type="checkbox" class="skill-checkbox">
+                            Arts Administration
+                        </label>
+                        <label class="skill-label">
+                            <input type="checkbox" class="skill-checkbox">
+                            Curating
+                        </label>
+                        <label class="skill-label">
+                            <input type="checkbox" class="skill-checkbox">
+                            Dance
+                        </label>
+                        <label class="skill-label">
+                            <input type="checkbox" class="skill-checkbox">
+                            Exhibition Arts
+                        </label>
+                        <label class="skill-label">
+                            <input type="checkbox" class="skill-checkbox">
+                            Exterior Design
+                        </label>
+                        <label class="skill-label">
+                            <input type="checkbox" class="skill-checkbox">
+                            Music Arts
+                        </label>
+                        <label class="skill-label">
+                            <input type="checkbox" class="skill-checkbox">
+                            Painting
+                        </label>
+                        <label class="skill-label">
+                            <input type="checkbox" class="skill-checkbox">
+                            Photography
+                        </label>
+                        <label class="skill-label">
+                            <input type="checkbox" class="skill-checkbox">
+                            Pottery
+                        </label>
+                        <label class="skill-label">
+                            <input type="checkbox" class="skill-checkbox">
+                            Visual Arts
+                        </label>
+                    </div>
+                    <div class="skill-column">
+                        <h3>Computers, IT</h3>
+                        <label class="skill-label">
+                            <input type="checkbox" class="skill-checkbox">
+                            Analytics
+                        </label>
+                        <label class="skill-label">
+                            <input type="checkbox" class="skill-checkbox">
+                            Basic Computer Skills
+                        </label>
+                        <label class="skill-label">
+                            <input type="checkbox" class="skill-checkbox">
+                            Database Administration
+                        </label>
+                        <label class="skill-label">
+                            <input type="checkbox" class="skill-checkbox">
+                            Google Apps
+                        </label>
+                        <label class="skill-label">
+                            <input type="checkbox" class="skill-checkbox">
+                            IT Consulting
+                        </label>
+                        <label class="skill-label">
+                            <input type="checkbox" class="skill-checkbox">
+                            Internet Research
+                        </label>
+                        <label class="skill-label">
+                            <input type="checkbox" class="skill-checkbox">
+                            Microsoft Office
+                        </label>
+                        <label class="skill-label">
+                            <input type="checkbox" class="skill-checkbox">
+                            PC
+                        </label>
+                        <label class="skill-label">
+                            <input type="checkbox" class="skill-checkbox">
+                            Robotics
+                        </label>
+                        <label class="skill-label">
+                            <input type="checkbox" class="skill-checkbox">
+                            SQL
+                        </label>
+                        <label class="skill-label">
+                            <input type="checkbox" class="skill-checkbox">
+                            Salesforce
+                        </label>
+                        <label class="skill-label">
+                            <input type="checkbox" class="skill-checkbox">
+                            Security Administration
+                        </label>
+                    </div>
+                    <div class="skill-column"></div>
+                        <h3>Engineering</h3>
+                        <label class="skill-label">
+                            <input type="checkbox" class="skill-checkbox">
+                            Chemical Engineering
+                        </label>
+                        <label class="skill-label">
+                            <input type="checkbox" class="skill-checkbox">
+                            Civil Engineering
+                        </label>
+                        <label class="skill-label">
+                            <input type="checkbox" class="skill-checkbox">
+                            Mechanical Engineering
+                        </label>
+                        <label class="skill-label">
+                            <input type="checkbox" class="skill-checkbox">
+                            System Engineering
+                        </label>
+                    </div>
+                    <div class="skill-column"></div>
+                        <h3>Development</h3>
+                        <label class="skill-label">
+                            <input type="checkbox" class="skill-checkbox">
+                            Sales Management
+                        </label>
+                        <label class="skill-label">
+                            <input type="checkbox" class="skill-checkbox">
+                            Volunteer Coordination
+                        </label>
+                        <label class="skill-label">
+                            <input type="checkbox" class="skill-checkbox">
+                            CSR
+                        </label>
+                        <label class="skill-label">
+                            <input type="checkbox" class="skill-checkbox">
+                            Community Outreach
+                        </label>
+                        <label class="skill-label">
+                            <input type="checkbox" class="skill-checkbox">
+                            Customer Acquisition
+                        </label>
+                        <label class="skill-label">
+                            <input type="checkbox" class="skill-checkbox">
+                            Donor Management
+                        </label>
+                        <label class="skill-label">
+                            <input type="checkbox" class="skill-checkbox">
+                            Fundraising
+                        </label>
+                        <label class="skill-label">
+                            <input type="checkbox" class="skill-checkbox">
+                            Grant Writing
+                        </label>
+                        <label class="skill-label">
+                            <input type="checkbox" class="skill-checkbox">
+                            Merchandising
+                        </label>
+                        <label class="skill-label">
+                            <input type="checkbox" class="skill-checkbox">
+                            Resource Development
+                        </label>
+                        <label class="skill-label">
+                            <input type="checkbox" class="skill-checkbox">
+                            Resource Management
+                        </label>
+                        <label class="skill-label">
+                            <input type="checkbox" class="skill-checkbox">
+                            Retail
+                        </label>
+                        <label class="skill-label">
+                            <input type="checkbox" class="skill-checkbox">
+                            Sales
+                        </label>
+                        <label class="skill-label">
+                            <input type="checkbox" class="skill-checkbox">
+                            Sales Coaching
+                        </label>
+                        <label class="skill-label">
+                            <input type="checkbox" class="skill-checkbox">
+                            Sales Process
+                        </label>
+                    </div>
+                    <div class="skill-column">
+                        <h3>Furniture, Clothes, Crafts</h3>
+                        <label class="skill-label">
+                            <input type="checkbox" class="skill-checkbox">
+                            Crocheting
+                        </label>
+                        <label class="skill-label">
+                            <input type="checkbox" class="skill-checkbox">
+                            Knitting
+                        </label>
+                        <label class="skill-label">
+                            <input type="checkbox" class="skill-checkbox">
+                            Quilting
+                        </label>
+                        <label class="skill-label">
+                            <input type="checkbox" class="skill-checkbox">
+                            Sewing
+                        </label>
+                        <label class="skill-label">
+                            <input type="checkbox" class="skill-checkbox">
+                            Upholstery
+                        </label>
+                    </div>
+                    <div class="skill-column">
+                        <h3>Web Development</h3>
+                        <label class="skill-label">
+                            <input type="checkbox" class="skill-checkbox">
+                            Adobe
+                        </label>
+                        <label class="skill-label">
+                            <input type="checkbox" class="skill-checkbox">
+                            Animation
+                        </label>
+                        <label class="skill-label">
+                            <input type="checkbox" class="skill-checkbox">
+                            Audio and Visual
+                        </label>
+                        <label class="skill-label">
+                            <input type="checkbox" class="skill-checkbox">
+                            Ecommerce
+                        </label>
+                        <label class="skill-label">
+                            <input type="checkbox" class="skill-checkbox">
+                            Graphing Design
+                        </label>
+                        <label class="skill-label">
+                            <input type="checkbox" class="skill-checkbox">
+                            Information Architecture
+                        </label>
+                        <label class="skill-label">
+                            <input type="checkbox" class="skill-checkbox">
+                            Mobile Programming
+                        </label>
+                        <label class="skill-label">
+                            <input type="checkbox" class="skill-checkbox">
+                            Online Flash Production
+                        </label>
+                        <label class="skill-label">
+                            <input type="checkbox" class="skill-checkbox">
+                            Online Video Production
+                        </label>
+                        <label class="skill-label">
+                            <input type="checkbox" class="skill-checkbox">
+                            Python
+                        </label>
+                        <label class="skill-label">
+                            <input type="checkbox" class="skill-checkbox">
+                            SEO
+                        </label>
+                        <label class="skill-label">
+                            <input type="checkbox" class="skill-checkbox">
+                            Software Development
+                        </label>
+                        <label class="skill-label">
+                            <input type="checkbox" class="skill-checkbox">
+                            Sound Production
+                        </label>
+                        <label class="skill-label">
+                            <input type="checkbox" class="skill-checkbox">
+                            TV Production
+                        </label>
+                        <label class="skill-label">
+                            <input type="checkbox" class="skill-checkbox">
+                            Video Production
+                        </label>
+                        <label class="skill-label">
+                            <input type="checkbox" class="skill-checkbox">
+                            Web Design
+                        </label>
+                        <label class="skill-label">
+                            <input type="checkbox" class="skill-checkbox">
+                            UX
+                        </label>
+                        <label class="skill-label">
+                            <input type="checkbox" class="skill-checkbox">
+                            Web Programming
+                        </label>
+                        <label class="skill-label">
+                            <input type="checkbox" class="skill-checkbox">
+                            Website Project Management
+                        </label>
+                    </div>
+                    <div class="skill-column">
+                        <h3>Legal, Advocacy</h3>
+                        <label class="skill-label">
+                            <input type="checkbox" class="skill-checkbox">
+                            Advocacy
+                        </label>
+                        <label class="skill-label">
+                            <input type="checkbox" class="skill-checkbox">
+                            Child Advocacy
+                        </label>
+                        <label class="skill-label">
+                            <input type="checkbox" class="skill-checkbox">
+                            Conflict Resolution
+                        </label>
+                        <label class="skill-label">
+                            <input type="checkbox" class="skill-checkbox">
+                            Contract Negotiations
+                        </label>
+                        <label class="skill-label">
+                            <input type="checkbox" class="skill-checkbox">
+                            Employment Law
+                        </label>
+                        <label class="skill-label">
+                            <input type="checkbox" class="skill-checkbox">
+                            Family Law
+                        </label>
+                        <label class="skill-label">
+                            <input type="checkbox" class="skill-checkbox">
+                            Immigration Law
+                        </label>
+                        <label class="skill-label">
+                            <input type="checkbox" class="skill-checkbox">
+                            Intellectual Property
+                        </label>
+                        <label class="skill-label">
+                            <input type="checkbox" class="skill-checkbox">
+                            General Legal
+                        </label>
+                        <label class="skill-label">
+                            <input type="checkbox" class="skill-checkbox">
+                            Litigation
+                        </label>
+                        <label class="skill-label">
+                            <input type="checkbox" class="skill-checkbox">
+                            Lobbying
+                        </label>
+                        <label class="skill-label">
+                            <input type="checkbox" class="skill-checkbox">
+                            Mediation
+                        </label>
+                        <label class="skill-label">
+                            <input type="checkbox" class="skill-checkbox">
+                            Mergers and Acquisitions
+                        </label>
+                        <label class="skill-label">
+                            <input type="checkbox" class="skill-checkbox">
+                            Paralegal
+                        </label>
+                        <label class="skill-label">
+                            <input type="checkbox" class="skill-checkbox">
+                            Public Advocacy
+                        </label>
+                        <label class="skill-label">
+                            <input type="checkbox" class="skill-checkbox">
+                            Secretarial
+                        </label>
+                        <label class="skill-label">
+                            <input type="checkbox" class="skill-checkbox">
+                            Tax Law
+                        </label>
+                    </div>
+                    <div class="skill-column">
+                        <h3>Music</h3>
+                        <label class="skill-label">
+                            <input type="checkbox" class="skill-checkbox">
+                            Beatboxing
+                        </label>
+                        <label class="skill-label">
+                            <input type="checkbox" class="skill-checkbox">
+                            Brass Instrument
+                        </label>
+                        <label class="skill-label">
+                            <input type="checkbox" class="skill-checkbox">
+                            Electronic Instrument
+                        </label>
+                        <label class="skill-label">
+                            <input type="checkbox" class="skill-checkbox">
+                            Keyboard Instrument
+                        </label>
+                        <label class="skill-label">
+                            <input type="checkbox" class="skill-checkbox">
+                            Music Therapy
+                        </label>
+                        <label class="skill-label">
+                            <input type="checkbox" class="skill-checkbox">
+                            Orchestration
+                        </label>
+                        <label class="skill-label">
+                            <input type="checkbox" class="skill-checkbox">
+                            Percussion Instrument
+                        </label>
+                        <label class="skill-label">
+                            <input type="checkbox" class="skill-checkbox">
+                            Rapping
+                        </label>
+                        <label class="skill-label">
+                            <input type="checkbox" class="skill-checkbox">
+                            Singing
+                        </label>
+                        <label class="skill-label">
+                            <input type="checkbox" class="skill-checkbox">
+                            Songwriting
+                        </label>
+                        <label class="skill-label">
+                            <input type="checkbox" class="skill-checkbox">
+                            String Instrument
+                        </label>
+                        <label class="skill-label">
+                            <input type="checkbox" class="skill-checkbox">
+                            Wind Instrument
+                        </label>
+                    </div>
+                    <div class="skill-column">
+                        <label class="skill-label">
+                            <input type="checkbox" class="skill-checkbox">
+                            Business Analysis
+                        </label>
+                        <label class="skill-label">
+                            <input type="checkbox" class="skill-checkbox">
+                            Business Planning
+                        </label>
+                        <label class="skill-label">
+                            <input type="checkbox" class="skill-checkbox">
+                            Capacity Planning
+                        </label>
+                        <label class="skill-label">
+                            <input type="checkbox" class="skill-checkbox">
+                            Market Research
+                        </label>
+                        <label class="skill-label">
+                            <input type="checkbox" class="skill-checkbox">
+                            Product Development
+                        </label>
+                        <label class="skill-label">
+                            <input type="checkbox" class="skill-checkbox">
+                            SWOT Analysis
+                        </label>
+                        <label class="skill-label">
+                            <input type="checkbox" class="skill-checkbox">
+                            GAP Analysis
+                        </label>
+                        <label class="skill-label">
+                            <input type="checkbox" class="skill-checkbox">
+                            Strategic Planning
+                        </label>
+                    </div>
+                <div class="skill-column-column">
+                    <div class="skill-column">
+                        <h3>Administrative, Clerical</h3>
+                        <label class="skill-label">
+                            <input type="checkbox" class="skill-checkbox">
+                            Administrative Support
+                        </label>
+                        <label class="skill-label">
+                            <input type="checkbox" class="skill-checkbox">
+                            Customer Service
+                        </label>
+                        <label class="skill-label">
+                            <input type="checkbox" class="skill-checkbox">
+                            Data Entry
+                        </label>
+                        <label class="skill-label">
+                            <input type="checkbox" class="skill-checkbox">
+                            Executive Admin
+                        </label>
+                        <label class="skill-label">
+                            <input type="checkbox" class="skill-checkbox">
+                            Office Management
+                        </label>
+                        <label class="skill-label">
+                            <input type="checkbox" class="skill-checkbox">
+                            Office Reception
+                        </label>
+                        <label class="skill-label">
+                            <input type="checkbox" class="skill-checkbox">
+                            Program Management
+                        </label>
+                        <label class="skill-label">
+                            <input type="checkbox" class="skill-checkbox">
+                            Transactions
+                        </label>
+                    </div>
+                    <div class="skill-column">
+                        <h3>Business, Management</h3>
+                        <label class="skill-label">
+                            <input type="checkbox" class="skill-checkbox">
+                            Business Development
+                        </label>
+                        <label class="skill-label">
+                            <input type="checkbox" class="skill-checkbox">
+                            Group Facilitation
+                        </label>
+                        <label class="skill-label">
+                            <input type="checkbox" class="skill-checkbox">
+                            Management
+                        </label>
+                        <label class="skill-label">
+                            <input type="checkbox" class="skill-checkbox">
+                            Market Analysis
+                        </label>
+                        <label class="skill-label">
+                            <input type="checkbox" class="skill-checkbox">
+                            Professional Development
+                        </label>
+                    </div>
+                    <div class="skill-column">
+                        <h3>Disaster Relief</h3>
+                        <label class="skill-label">
+                            <input type="checkbox" class="skill-checkbox">
+                            Search and Rescue
+                        </label>
+                    </div>
+                    <div class="skill-column">
+                        <h3>Finance</h3>
+                        <label class="skill-label">
+                            <input type="checkbox" class="skill-checkbox">
+                            Accounting
+                        </label>
+                        <label class="skill-label">
+                            <input type="checkbox" class="skill-checkbox">
+                            Bookkeeping
+                        </label>
+                        <label class="skill-label">
+                            <input type="checkbox" class="skill-checkbox">
+                            Budgeting
+                        </label>
+                        <label class="skill-label">
+                            <input type="checkbox" class="skill-checkbox">
+                            Cost Analysis
+                        </label>
+                        <label class="skill-label">
+                            <input type="checkbox" class="skill-checkbox">
+                            Tax Assistance
+                        </label>
+                        <label class="skill-label">
+                            <input type="checkbox" class="skill-checkbox">
+                            Financial Auditing
+                        </label>
+                        <label class="skill-label">
+                            <input type="checkbox" class="skill-checkbox">
+                            Financial Planning
+                        </label>
+                        <label class="skill-label">
+                            <input type="checkbox" class="skill-checkbox">
+                            Financial Service Assistance
+                        </label>
+                        <label class="skill-label">
+                            <input type="checkbox" class="skill-checkbox">
+                            Microfinance
+                        </label>
+                        <label class="skill-label">
+                            <input type="checkbox" class="skill-checkbox">
+                            Reporting and Dashboards
+                        </label>
+                    </div>
+                    <div class="skill-column">
+                        <h3>Human Resources</h3>
+                        <label class="skill-label">
+                            <input type="checkbox" class="skill-checkbox">
+                            Benefits
+                        </label>
+                        <label class="skill-label">
+                            <input type="checkbox" class="skill-checkbox">
+                            Career Coach
+                        </label>
+                        <label class="skill-label">
+                            <input type="checkbox" class="skill-checkbox">
+                            Compensation
+                        </label>
+                        <label class="skill-label">
+                            <input type="checkbox" class="skill-checkbox">
+                            HR Diversity
+                        </label>
+                        <label class="skill-label">
+                            <input type="checkbox" class="skill-checkbox">
+                            HR Information Systems
+                        </label>
+                        <label class="skill-label">
+                            <input type="checkbox" class="skill-checkbox">
+                            HR Legal Compliance
+                        </label>
+                        <label class="skill-label">
+                            <input type="checkbox" class="skill-checkbox">
+                            HR Recruitment
+                        </label>
+                        <label class="skill-label">
+                            <input type="checkbox" class="skill-checkbox">
+                            HR Strategy
+                        </label>
+                        <label class="skill-label">
+                            <input type="checkbox" class="skill-checkbox">
+                            HR Training and Development
+                        </label>
+                        <label class="skill-label">
+                            <input type="checkbox" class="skill-checkbox">
+                            Organization Design
+                        </label>
+                        <label class="skill-label">
+                            <input type="checkbox" class="skill-checkbox">
+                            Performance Management
+                        </label>
+                        <label class="skill-label">
+                            <input type="checkbox" class="skill-checkbox">
+                            Recruiting
+                        </label>
+                    </div>
+                    <div class="skill-column">
+                        <h3>Housing, Facilities</h3>
+                        <label class="skill-label">
+                            <input type="checkbox" class="skill-checkbox">
+                            Architecture
+                        </label>
+                        <label class="skill-label">
+                            <input type="checkbox" class="skill-checkbox">
+                            Construction
+                        </label>
+                        <label class="skill-label">
+                            <input type="checkbox" class="skill-checkbox">
+                            Electrical
+                        </label>
+                        <label class="skill-label">
+                            <input type="checkbox" class="skill-checkbox">
+                            Facilities Management
+                        </label>
+                        <label class="skill-label">
+                            <input type="checkbox" class="skill-checkbox">
+                            Heating
+                        </label>
+                        <label class="skill-label">
+                            <input type="checkbox" class="skill-checkbox">
+                            Air Conditioning
+                        </label>
+                        <label class="skill-label">
+                            <input type="checkbox" class="skill-checkbox">
+                            Home Repair
+                        </label>
+                        <label class="skill-label">
+                            <input type="checkbox" class="skill-checkbox">
+                            Hospitality
+                        </label>
+                        <label class="skill-label">
+                            <input type="checkbox" class="skill-checkbox">
+                            Housekeeping
+                        </label>
+                        <label class="skill-label">
+                            <input type="checkbox" class="skill-checkbox">
+                            Interior Design
+                        </label>
+                        <label class="skill-label">
+                            <input type="checkbox" class="skill-checkbox">
+                            Landscaping
+                        </label>
+                        <label class="skill-label">
+                            <input type="checkbox" class="skill-checkbox">
+                            Real Estate
+                        </label>
+                        <label class="skill-label">
+                            <input type="checkbox" class="skill-checkbox">
+                            Renovation
+                        </label>
+                        <label class="skill-label">
+                            <input type="checkbox" class="skill-checkbox">
+                            Security
+                        </label>
+                        <label class="skill-label">
+                            <input type="checkbox" class="skill-checkbox">
+                            Urban Planning
+                        </label>
+                    </div>
+                    <div class="skill-column">
+                        <h3>Interpersonal</h3>
+                        <label class="skill-label">
+                            <input type="checkbox" class="skill-checkbox">
+                            Critical Thinking
+                        </label>
+                        <label class="skill-label">
+                            <input type="checkbox" class="skill-checkbox">
+                            Multi-Tasking
+                        </label>
+                        <label class="skill-label">
+                            <input type="checkbox" class="skill-checkbox">
+                            Networking
+                        </label>
+                        <label class="skill-label">
+                            <input type="checkbox" class="skill-checkbox">
+                            Organization
+                        </label>
+                        <label class="skill-label">
+                            <input type="checkbox" class="skill-checkbox">
+                            People Skills
+                        </label>
+                        <label class="skill-label">
+                            <input type="checkbox" class="skill-checkbox">
+                            Problem Solving
+                        </label>
+                        <label class="skill-label">
+                            <input type="checkbox" class="skill-checkbox">
+                            Project Management
+                        </label>
+                        <label class="skill-label">
+                            <input type="checkbox" class="skill-checkbox">
+                            Public Speaking
+                        </label>
+                        <label class="skill-label">
+                            <input type="checkbox" class="skill-checkbox">
+                            Reading Comprehension
+                        </label>
+                        <label class="skill-label">
+                            <input type="checkbox" class="skill-checkbox">
+                            Relationship Building
+                        </label>
+                        <label class="skill-label">
+                            <input type="checkbox" class="skill-checkbox">
+                            Verbal Communication
+                        </label>
+                        <label class="skill-label">
+                            <input type="checkbox" class="skill-checkbox">
+                            Written Communication
+                        </label>
+                    </div>
+                    <div class="skill-column">
+                        <h3>Logistics, Supply Chain, Transportation</h3>
+                        <label class="skill-label">
+                            <input type="checkbox" class="skill-checkbox">
+                            Bus Driving
+                        </label>
+                        <label class="skill-label">
+                            <input type="checkbox" class="skill-checkbox">
+                            Van Driving
+                        </label>
+                        <label class="skill-label">
+                            <input type="checkbox" class="skill-checkbox">
+                            Delivery
+                        </label>
+                        <label class="skill-label">
+                            <input type="checkbox" class="skill-checkbox">
+                            Inventory Management
+                        </label>
+                        <label class="skill-label">
+                            <input type="checkbox" class="skill-checkbox">
+                            Operations
+                        </label>
+                        <label class="skill-label">
+                            <input type="checkbox" class="skill-checkbox">
+                            Supply Chain
+                        </label>
+                        <label class="skill-label">
+                            <input type="checkbox" class="skill-checkbox">
+                            Supply Chain Logistics
+                        </label>
+                        <label class="skill-label">
+                            <input type="checkbox" class="skill-checkbox">
+                            Transportation
+                        </label>
+                        <label class="skill-label">
+                            <input type="checkbox" class="skill-checkbox">
+                            Transportation Management
+                        </label>
+                        <label class="skill-label">
+                            <input type="checkbox" class="skill-checkbox">
+                            Truck Driving
+                        </label>
+                        <label class="skill-label">
+                            <input type="checkbox" class="skill-checkbox">
+                            Warehouse Equipment Operations
+                        </label>
+                        <label class="skill-label">
+                            <input type="checkbox" class="skill-checkbox">
+                            Warehousing
+                        </label>
+                    </div>
+                    <div class="skill-column">
+                        <h3>Performing Arts</h3>
+                        <label class="skill-label">
+                            <input type="checkbox" class="skill-checkbox">
+                            Acting
+                        </label>
+                        <label class="skill-label">
+                            <input type="checkbox" class="skill-checkbox">
+                            Stage Management
+                        </label>
+                        <label class="skill-label">
+                            <input type="checkbox" class="skill-checkbox">
+                            Storytelling
+                        </label>
+                        <label class="skill-label">
+                            <input type="checkbox" class="skill-checkbox">
+                            Theater Arts
+                        </label>
+                    </div>
+                    <div class="skill-column">
+                        <h3>Trades</h3>
+                        <label class="skill-label">
+                            <input type="checkbox" class="skill-checkbox">
+                            Appliance Repair
+                        </label>
+                        <label class="skill-label">
+                            <input type="checkbox" class="skill-checkbox">
+                            Auto Repair
+                        </label>
+                        <label class="skill-label">
+                            <input type="checkbox" class="skill-checkbox">
+                            Aviation
+                        </label>
+                        <label class="skill-label">
+                            <input type="checkbox" class="skill-checkbox">
+                            Bike Repair
+                        </label>
+                        <label class="skill-label">
+                            <input type="checkbox" class="skill-checkbox">
+                            Carpentry
+                        </label>
+                        <label class="skill-label">
+                            <input type="checkbox" class="skill-checkbox">
+                            Cosmetology
+                        </label>
+                        <label class="skill-label">
+                            <input type="checkbox" class="skill-checkbox">
+                            Electronics
+                        </label>
+                        <label class="skill-label">
+                            <input type="checkbox" class="skill-checkbox">
+                            Interior Decoration
+                        </label>
+                        <label class="skill-label">
+                            <input type="checkbox" class="skill-checkbox">
+                            Exterior Decoration
+                        </label>
+                        <label class="skill-label">
+                            <input type="checkbox" class="skill-checkbox">
+                            Janitorial Maintenace
+                        </label>
+                        <label class="skill-label">
+                            <input type="checkbox" class="skill-checkbox">
+                            Plumbing
+                        </label>
+                        <label class="skill-label">
+                            <input type="checkbox" class="skill-checkbox">
+                            Stylist
+                        </label>
+                        <label class="skill-label">
+                            <input type="checkbox" class="skill-checkbox">
+                            Telecommunications
+                        </label>
+                        <label class="skill-label">
+                            <input type="checkbox" class="skill-checkbox">
+                            Welding
+                        </label>
+                        <label class="skill-label">
+                            <input type="checkbox" class="skill-checkbox">
+                            Woodworking
+                        </label>
+                    </div>
+                </div>
+                <div class="skill-column-column">
+                    <div class="skill-column">
+                        <h3>Animals, Environment</h3>
+                        <label class="skill-label">
+                            <input type="checkbox" class="skill-checkbox">
+                            Agronomy
+                        </label>
+                        <label class="skill-label">
+                            <input type="checkbox" class="skill-checkbox">
+                            Animal Care
+                        </label>
+                        <label class="skill-label">
+                            <input type="checkbox" class="skill-checkbox">
+                            Animal Therapy
+                        </label>
+                        <label class="skill-label">
+                            <input type="checkbox" class="skill-checkbox">
+                            Aquarium Maintenance
+                        </label>
+                        <label class="skill-label">
+                            <input type="checkbox" class="skill-checkbox">
+                            Botany
+                        </label>
+                        <label class="skill-label">
+                            <input type="checkbox" class="skill-checkbox">
+                            Environmental Education
+                        </label>
+                        <label class="skill-label">
+                            <input type="checkbox" class="skill-checkbox">
+                            Environmental Policy
+                        </label>
+                        <label class="skill-label">
+                            <input type="checkbox" class="skill-checkbox">
+                            Farming
+                        </label>
+                        <label class="skill-label">
+                            <input type="checkbox" class="skill-checkbox">
+                            Gardening
+                        </label>
+                        <label class="skill-label">
+                            <input type="checkbox" class="skill-checkbox">
+                            Habitat Restoration
+                        </label>
+                        <label class="skill-label">
+                            <input type="checkbox" class="skill-checkbox">
+                            Horiculture
+                        </label>
+                        <label class="skill-label">
+                            <input type="checkbox" class="skill-checkbox">
+                            Veterinary
+                        </label>
+                    </div>
+                    <div class="skill-column">
+                        <label class="skill-label">
+                            <input type="checkbox" class="skill-checkbox">
+                            Child Care
+                        </label>
+                        <label class="skill-label">
+                            <input type="checkbox" class="skill-checkbox">
+                            Child Development
+                        </label>
+                        <label class="skill-label">
+                            <input type="checkbox" class="skill-checkbox">
+                            Child Welfare
+                        </label>
+                        <label class="skill-label">
+                            <input type="checkbox" class="skill-checkbox">
+                            Crisis Intervention
+                        </label>
+                        <label class="skill-label">
+                            <input type="checkbox" class="skill-checkbox">
+                            Eldercare
+                        </label>
+                        <label class="skill-label">
+                            <input type="checkbox" class="skill-checkbox">
+                            Family Therapy
+                        </label>
+                        <label class="skill-label">
+                            <input type="checkbox" class="skill-checkbox">
+                            Youth Services
+                        </label>
+                    </div>
+                    <div class="skill-column">
+                        <label class="skill-label">
+                            <input type="checkbox" class="skill-checkbox">
+                            Adult Education
+                        </label>
+                        <label class="skill-label">
+                            <input type="checkbox" class="skill-checkbox">
+                            ESL
+                        </label>
+                        <label class="skill-label">
+                            <input type="checkbox" class="skill-checkbox">
+                            Financial Literacy
+                        </label>
+                        <label class="skill-label">
+                            <input type="checkbox" class="skill-checkbox">
+                            General Education
+                        </label>
+                        <label class="skill-label">
+                            <input type="checkbox" class="skill-checkbox">
+                            Literacy
+                        </label>
+                        <label class="skill-label">
+                            <input type="checkbox" class="skill-checkbox">
+                            Physical Education
+                        </label>
+                        <label class="skill-label">
+                            <input type="checkbox" class="skill-checkbox">
+                            Writing
+                        </label>
+                        <label class="skill-label">
+                            <input type="checkbox" class="skill-checkbox">
+                            STEM
+                        </label>
+                        <label class="skill-label">
+                            <input type="checkbox" class="skill-checkbox">
+                            Special Needs
+                        </label>
+                        <label class="skill-label">
+                            <input type="checkbox" class="skill-checkbox">
+                            Sports Coaching
+                        </label>
+                        <label class="skill-label">
+                            <input type="checkbox" class="skill-checkbox">
+                            Teaching
+                        </label>
+                        <label class="skill-label">
+                            <input type="checkbox" class="skill-checkbox">
+                            Tutoring
+                        </label>
+                    </div>
+                    <div class="skill-column">
+                        <h3>Food Services, Events</h3>
+                        <label class="skill-label">
+                            <input type="checkbox" class="skill-checkbox">
+                            Baking
+                        </label>
+                        <label class="skill-label">
+                            <input type="checkbox" class="skill-checkbox">
+                            Bartending
+                        </label>
+                        <label class="skill-label">
+                            <input type="checkbox" class="skill-checkbox">
+                            Cooking
+                        </label>
+                        <label class="skill-label">
+                            <input type="checkbox" class="skill-checkbox">
+                            Event Design
+                        </label>
+                        <label class="skill-label">
+                            <input type="checkbox" class="skill-checkbox">
+                            Event Planning
+                        </label>
+                        <label class="skill-label">
+                            <input type="checkbox" class="skill-checkbox">
+                            Event Management
+                        </label>
+                        <label class="skill-label">
+                            <input type="checkbox" class="skill-checkbox">
+                            Food and Beverage Services
+                        </label>
+                        <label class="skill-label">
+                            <input type="checkbox" class="skill-checkbox">
+                            Food Delivery
+                        </label>
+                        <label class="skill-label">
+                            <input type="checkbox" class="skill-checkbox">
+                            Food Distribution
+                        </label>
+                        <label class="skill-label">
+                            <input type="checkbox" class="skill-checkbox">
+                            Food Service
+                        </label>
+                        <label class="skill-label">
+                            <input type="checkbox" class="skill-checkbox">
+                            Ushering
+                        </label>
+                    </div>
+                    <div class="skill-column">
+                        <h3>Healthcare & Social Services</h3>
+                        <label class="skill-label">
+                            <input type="checkbox" class="skill-checkbox">
+                            Acupuncture
+                        </label>
+                        <label class="skill-label">
+                            <input type="checkbox" class="skill-checkbox">
+                            Aromatherapy
+                        </label>
+                        <label class="skill-label">
+                            <input type="checkbox" class="skill-checkbox">
+                            Bereavement Support
+                        </label>
+                        <label class="skill-label">
+                            <input type="checkbox" class="skill-checkbox">
+                            Cardiology
+                        </label>
+                        <label class="skill-label">
+                            <input type="checkbox" class="skill-checkbox">
+                            Case Work
+                        </label>
+                        <label class="skill-label">
+                            <input type="checkbox" class="skill-checkbox">
+                            Case Management
+                        </label>
+                        <label class="skill-label">
+                            <input type="checkbox" class="skill-checkbox">
+                            Children Medical Services
+                        </label>
+                        <label class="skill-label">
+                            <input type="checkbox" class="skill-checkbox">
+                            Counseling
+                        </label>
+                        <label class="skill-label">
+                            <input type="checkbox" class="skill-checkbox">
+                            Mental Health Services
+                        </label>
+                        <label class="skill-label">
+                            <input type="checkbox" class="skill-checkbox">
+                            Crisis Counseling
+                        </label>
+                        <label class="skill-label">
+                            <input type="checkbox" class="skill-checkbox">
+                            Dental
+                        </label>
+                        <label class="skill-label">
+                            <input type="checkbox" class="skill-checkbox">
+                            EMT
+                        </label>
+                        <label class="skill-label">
+                            <input type="checkbox" class="skill-checkbox">
+                            First Aid
+                        </label>
+                        <label class="skill-label">
+                            <input type="checkbox" class="skill-checkbox">
+                            Healthcare
+                        </label>
+                        <label class="skill-label">
+                            <input type="checkbox" class="skill-checkbox">
+                            Hospice Care
+                        </label>
+                        <label class="skill-label">
+                            <input type="checkbox" class="skill-checkbox">
+                            Law Enforcement
+                        </label>
+                        <label class="skill-label">
+                            <input type="checkbox" class="skill-checkbox">
+                            Massage Therapy
+                        </label>
+                        <label class="skill-label">
+                            <input type="checkbox" class="skill-checkbox">
+                            Nursing
+                        </label>
+                        <label class="skill-label">
+                            <input type="checkbox" class="skill-checkbox">
+                            Nutrition
+                        </label>
+                        <label class="skill-label">
+                            <input type="checkbox" class="skill-checkbox">
+                            Occupational Therapy
+                        </label>
+                        <label class="skill-label">
+                            <input type="checkbox" class="skill-checkbox">
+                            Pathology
+                        </label>
+                        <label class="skill-label">
+                            <input type="checkbox" class="skill-checkbox">
+                            Patient Care
+                        </label>
+                        <label class="skill-label">
+                            <input type="checkbox" class="skill-checkbox">
+                            Pediatrics
+                        </label>
+                        <label class="skill-label">
+                            <input type="checkbox" class="skill-checkbox">
+                            Pharmacology
+                        </label>
+                        <label class="skill-label">
+                            <input type="checkbox" class="skill-checkbox">
+                            Social Work
+                        </label>
+                        <label class="skill-label">
+                            <input type="checkbox" class="skill-checkbox">
+                            Speech Language Pathology
+                        </label>
+                        <label class="skill-label">
+                            <input type="checkbox" class="skill-checkbox">
+                            Spiritual Healing
+                        </label>
+                        <label class="skill-label">
+                            <input type="checkbox" class="skill-checkbox">
+                            Veteran Care
+                        </label>
+                    </div>
+                    <div class="skill-column">
+                        <h3>IT Infrasturcture, Software</h3>
+                        <label class="skill-label">
+                            <input type="checkbox" class="skill-checkbox">
+                            ERP
+                        </label>
+                        <label class="skill-label">
+                            <input type="checkbox" class="skill-checkbox">
+                            CRM
+                        </label>
+                        <label class="skill-label">
+                            <input type="checkbox" class="skill-checkbox">
+                            IT Help
+                        </label>
+                        <label class="skill-label">
+                            <input type="checkbox" class="skill-checkbox">
+                            IT Management
+                        </label>
+                        <label class="skill-label">
+                            <input type="checkbox" class="skill-checkbox">
+                            IT Strategy
+                        </label>
+                        <label class="skill-label">
+                            <input type="checkbox" class="skill-checkbox">
+                            Network Administration
+                        </label>
+                        <label class="skill-label">
+                            <input type="checkbox" class="skill-checkbox">
+                            Software Engineering
+                        </label>
+                    </div>
+                    <div class="skill-column">
+                        <h3>Language, Culture</h3>
+                        <label class="skill-label">
+                            <input type="checkbox" class="skill-checkbox">
+                            ASL
+                        </label>
+                        <label class="skill-label">
+                            <input type="checkbox" class="skill-checkbox">
+                            Arabic
+                        </label>
+                        <label class="skill-label">
+                            <input type="checkbox" class="skill-checkbox">
+                            Bengali
+                        </label>
+                        <label class="skill-label">
+                            <input type="checkbox" class="skill-checkbox">
+                            Braille
+                        </label>
+                        <label class="skill-label">
+                            <input type="checkbox" class="skill-checkbox">
+                            Burmese
+                        </label>
+                        <label class="skill-label">
+                            <input type="checkbox" class="skill-checkbox">
+                            Cantonese
+                        </label>
+                        <label class="skill-label">
+                            <input type="checkbox" class="skill-checkbox">
+                            Mandarin
+                        </label>
+                        <label class="skill-label">
+                            <input type="checkbox" class="skill-checkbox">
+                            Cross Cultural Communication
+                        </label>
+                        <label class="skill-label">
+                            <input type="checkbox" class="skill-checkbox">
+                            English
+                        </label>
+                        <label class="skill-label">
+                            <input type="checkbox" class="skill-checkbox">
+                            Faith Based Leadership
+                        </label>
+                        <label class="skill-label">
+                            <input type="checkbox" class="skill-checkbox">
+                            French
+                        </label>
+                        <label class="skill-label">
+                            <input type="checkbox" class="skill-checkbox">
+                            German
+                        </label>
+                        <label class="skill-label">
+                            <input type="checkbox" class="skill-checkbox">
+                            Hatian
+                        </label>
+                        <label class="skill-label">
+                            <input type="checkbox" class="skill-checkbox">
+                            Hebrew
+                        </label>
+                        <label class="skill-label">
+                            <input type="checkbox" class="skill-checkbox">
+                            Interpreter
+                        </label>
+                        <label class="skill-label">
+                            <input type="checkbox" class="skill-checkbox">
+                            Italian
+                        </label>
+                        <label class="skill-label">
+                            <input type="checkbox" class="skill-checkbox">
+                            Japanese
+                        </label>
+                        <label class="skill-label">
+                            <input type="checkbox" class="skill-checkbox">
+                            Korean
+                        </label>
+                        <label class="skill-label">
+                            <input type="checkbox" class="skill-checkbox">
+                            Polish
+                        </label>
+                        <label class="skill-label">
+                            <input type="checkbox" class="skill-checkbox">
+                            Portuguese
+                        </label>
+                        <label class="skill-label">
+                            <input type="checkbox" class="skill-checkbox">
+                            Punjabi
+                        </label>
+                        <label class="skill-label">
+                            <input type="checkbox" class="skill-checkbox">
+                            Russian
+                        </label>
+                        <label class="skill-label">
+                            <input type="checkbox" class="skill-checkbox">
+                            Spanish
+                        </label>
+                        <label class="skill-label">
+                            <input type="checkbox" class="skill-checkbox">
+                            Sudanese
+                        </label>
+                        <label class="skill-label">
+                            <input type="checkbox" class="skill-checkbox">
+                            Swahili
+                        </label>
+                        <label class="skill-label">
+                            <input type="checkbox" class="skill-checkbox">
+                            Thai
+                        </label>
+                        <label class="skill-label">
+                            <input type="checkbox" class="skill-checkbox">
+                            Translation
+                        </label>
+                        <label class="skill-label">
+                            <input type="checkbox" class="skill-checkbox">
+                            Turkish
+                        </label>
+                        <label class="skill-label">
+                            <input type="checkbox" class="skill-checkbox">
+                            Ukranian
+                        </label>
+                        <label class="skill-label">
+                            <input type="checkbox" class="skill-checkbox">
+                            Vietnamese
+                        </label>
+                    </div>
+                    <div class="skill-column">
+                        <h3>Marketing, Communications</h3>
+                        <label class="skill-label">
+                            <input type="checkbox" class="skill-checkbox">
+                            Advertising
+                        </label>
+                        <label class="skill-label">
+                            <input type="checkbox" class="skill-checkbox">
+                            Brand Development and Messaging
+                        </label>
+                        <label class="skill-label">
+                            <input type="checkbox" class="skill-checkbox">
+                            Content Management Systems
+                        </label>
+                        <label class="skill-label">
+                            <input type="checkbox" class="skill-checkbox">
+                            Copy Writing
+                        </label>
+                        <label class="skill-label">
+                            <input type="checkbox" class="skill-checkbox">
+                            Copy Editing
+                        </label>
+                        <label class="skill-label">
+                            <input type="checkbox" class="skill-checkbox">
+                            Social Media Marketing
+                        </label>
+                        <label class="skill-label">
+                            <input type="checkbox" class="skill-checkbox">
+                            Journalism
+                        </label>
+                        <label class="skill-label">
+                            <input type="checkbox" class="skill-checkbox">
+                            Mar Com
+                        </label>
+                        <label class="skill-label">
+                            <input type="checkbox" class="skill-checkbox">
+                            Marketing Analytics
+                        </label>
+                        <label class="skill-label">
+                            <input type="checkbox" class="skill-checkbox">
+                            Market Strategy
+                        </label>
+                        <label class="skill-label">
+                            <input type="checkbox" class="skill-checkbox">
+                            Public Relations
+                        </label>
+                        <label class="skill-label">
+                            <input type="checkbox" class="skill-checkbox">
+                            Sales Marketing
+                        </label>
+                        <label class="skill-label">
+                            <input type="checkbox" class="skill-checkbox">
+                            Blog Marketing
+                        </label>
+                        <label class="skill-label">
+                            <input type="checkbox" class="skill-checkbox">
+                            Technical Writing
+                        </label>
+                    </div>
+                    <div class="skill-column">
+                        <h3>Sports, Recreation</h3>
+                        <label class="skill-label">
+                            <input type="checkbox" class="skill-checkbox">
+                            Baseball
+                        </label>
+                        <label class="skill-label">
+                            <input type="checkbox" class="skill-checkbox">
+                            Basketball
+                        </label>
+                        <label class="skill-label">
+                            <input type="checkbox" class="skill-checkbox">
+                            Bicycling
+                        </label>
+                        <label class="skill-label">
+                            <input type="checkbox" class="skill-checkbox">
+                            Boxing
+                        </label>
+                        <label class="skill-label">
+                            <input type="checkbox" class="skill-checkbox">
+                            Coaching
+                        </label>
+                        <label class="skill-label">
+                            <input type="checkbox" class="skill-checkbox">
+                            Aerobics
+                        </label>
+                        <label class="skill-label">
+                            <input type="checkbox" class="skill-checkbox">
+                            Equestrian
+                        </label>
+                        <label class="skill-label">
+                            <input type="checkbox" class="skill-checkbox">
+                            Fitness Instruction
+                        </label>
+                        <label class="skill-label">
+                            <input type="checkbox" class="skill-checkbox">
+                            American Football
+                        </label>
+                        <label class="skill-label">
+                            <input type="checkbox" class="skill-checkbox">
+                            Golf
+                        </label>
+                        <label class="skill-label">
+                            <input type="checkbox" class="skill-checkbox">
+                            Hockey
+                        </label>
+                        <label class="skill-label">
+                            <input type="checkbox" class="skill-checkbox">
+                            Lacrosse
+                        </label>
+                        <label class="skill-label">
+                            <input type="checkbox" class="skill-checkbox">
+                            Martial Arts
+                        </label>
+                        <label class="skill-label">
+                            <input type="checkbox" class="skill-checkbox">
+                            Outdoor Recreation
+                        </label>
+                        <label class="skill-label">
+                            <input type="checkbox" class="skill-checkbox">
+                            Racquet Sports
+                        </label>
+                        <label class="skill-label">
+                            <input type="checkbox" class="skill-checkbox">
+                            Rugby
+                        </label>
+                        <label class="skill-label">
+                            <input type="checkbox" class="skill-checkbox">
+                            Snow Sports
+                        </label>
+                        <label class="skill-label">
+                            <input type="checkbox" class="skill-checkbox">
+                            Soccer
+                        </label>
+                        <label class="skill-label">
+                            <input type="checkbox" class="skill-checkbox">
+                            Swimming
+                        </label>
+                        <label class="skill-label">
+                            <input type="checkbox" class="skill-checkbox">
+                            Water Recreation
+                        </label>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <button type="submit" id="submitFilters">Save Filters</button>
+        </form>
+    </div>
+
+    <script>
+        document.getElementById('filterForm').addEventListener('submit', function (event) {
+            // Prevent the default form submission behavior
+            event.preventDefault();
+
+            // Get the checked labels into an array
+            const checkedLabels = getCheckedItems();
+            console.log(checkedLabels)
+
+            // Send a POST request to your server
+            sendPostRequest({ filters: checkedLabels });
+
+            function getCheckedItems() {
+                const checkboxes = document.querySelectorAll('.cause-checkbox, .virtual-checkbox, .skill-checkbox');
+
+                const checkedItems = {
+                    causes: [],
+                    virtual: false,
+                    skills: []
+                };
+
+                Array.from(checkboxes).forEach(checkedCheckbox => {
+                    if (checkedCheckbox.checked) {
+                        const label = checkedCheckbox.closest('label');
+                        const labelText = label.innerText.trim();
+
+                        if (checkedCheckbox.classList.contains('cause-checkbox')) {
+                            checkedItems.causes.push(labelText);
+                        } else if (checkedCheckbox.classList.contains('virtual-checkbox') && labelText.toLowerCase().includes('virtual')) {
+                            checkedItems.virtual = true;
+                        } else if (checkedCheckbox.classList.contains('skill-checkbox')) {
+                            checkedItems.skills.push(labelText);
+                        }
+                    }
+                });
+
+                // Apply formatting to causes and skills
+                checkedItems.causes = checkedItems.causes.map(formatLabel);
+                checkedItems.skills = checkedItems.skills.map(formatLabel);
+
+                return checkedItems;
+            }
+
+            // Helper function to format labels
+            function formatLabel(label) {
+                // Convert to lowercase and replace spaces with underscores
+                return label.toLowerCase().replace(/\s+/g, '_');
+            }
+
+
+        
+            function sendPostRequest(data) {
+                fetch('/filters', {
+                    method: 'POST',
+                    headers: {
+                    'Content-Type': 'application/json',
+                    },
+                    body: JSON.stringify(data),
+                })
+                    .then(response => {
+                        if (response.ok) {
+                            window.location.href = '/'
+                        } else {
+                            console.log('Internal server error.')
+                        }
+                    })
+            }
+    });
+    </script>
+
+
+
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+</body>
+</html>

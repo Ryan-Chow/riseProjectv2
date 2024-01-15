@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Leaderboard</title>
+    <link href="https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/styles/leaderboard.css">
+</head>
+<body>
+
+    <!-- NAVBAR -->
+
+    <nav class="navbar">
+        <div class="navbar__container">
+            <a href="/" id="navbar__logo">
+                <ion-icon name="body-outline"></ion-icon>
+                Volunteer League
+            </a>
+        </div>
+    </nav>
+
+    <div class="container">
+
+        <!-- SIDEBAR -->
+
+        <aside>
+            <div class="sidebar">
+                <a href="/league/<%= leagueID %>">
+                    <ion-icon name="grid"></ion-icon>
+                    <h3>Home</h3>
+                </a>
+                <a href="/league/discover/<%= leagueID %>">
+                    <ion-icon name="search"></ion-icon>
+                    <h3>Discover</h3>
+                </a>
+                <a href="/league/game/<%= leagueID %>" class="active">
+                    <ion-icon name="game-controller"></ion-icon>
+                    <h3>Quest</h3>
+                </a>
+                <a href="/league/members/<%= leagueID %>">
+                    <ion-icon name="people"></ion-icon>
+                    <h3>Members</h3>
+                </a>
+                <a href="/league/activity/<%= leagueID %>">
+                    <ion-icon name="analytics-outline"></ion-icon>
+                    <h3>Activity</h3>
+                </a>
+                <a href="" id=""> <!-- ADD DYNAMICNESS HERE FOR IF USER IS OWNER OR NOT -->
+                    <ion-icon name="cog"></ion-icon>
+                    <h3>League Settings</h3>
+                </a>
+                <a href="/league/ownerdashboard/<%= leagueID %>" id=""> <!-- ADD DYNAMICNESS HERE FOR IF USER IS OWNER OR NOT -->
+                    <ion-icon name="checkmark"></ion-icon>
+                    <h3>Approve Activity</h3>
+                </a>
+                <a href="/">
+                    <ion-icon name="log-out"></ion-icon>
+                    <h3>Personal Dashboard</h3>
+                </a>
+            </div>
+        </aside>
+
+        <!-- MAIN -->
+
+        <main>
+            <div class="main-content">
+                <div class="card-container">
+                    <div class="daily-shop">
+                        <div class="daily-shop-header">
+                            <h1>Daily Shop</h1>
+                            <p>Refreshes in 23 hours</p>
+                        </div>
+                        <div class="store-items">
+                            <button id="0.2" class="item">
+                                <h2>Coconut</h2>
+                                <h3 id="uncommon" class="rarity">Uncommon</h3>
+                                <h3>500 coins</h3>
+                                <img src="images/coconut.png" alt="" width="100" height="100">
+                                <p>+0.2 Multiplier</p>
+                            </button>
+                            
+                            <button id="1.0" class="item">
+                                <h2>Colored Boots</h2>
+                                <h3 id="epic" class="rarity">Epic</h3>
+                                <h3>2500 coins</h3>
+                                <img src="images/coconut.png" alt="" width="100" height="100">
+                                <p>+1.0 Multiplier</p>
+                            </button>
+                            
+                            <button id="level" class="item">
+                                <h2>Level Token</h2>
+                                <h3 id="legendary" class="rarity">LEGENDARY</h3>
+                                <h3>1000 coins</h3>
+                                <img src="images/coconut.png" alt="" width="100" height="100">
+                                <p>Level Up</p>
+                            </button>
+                            
+                            <button id="0.1" class="item">
+                                <h2>Penny</h2>
+                                <h3 class="rarity">Common</h3>
+                                <h3>299 coins</h3>
+                                <img src="images/coconut.png" alt="" width="100" height="100">
+                                <p>+0.1 Multiplier</p>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="leaderboard-card">
+                        <h1 class="main-title">League Leaderboard & Store</h1>
+                        <% if (leaderboard && leaderboard.rows.length > 0) { %>
+                            <div class="leaderboard-container">
+                                <% leaderboard.rows.forEach((player, index) => { %>
+                                    <div class="player-item">
+                                        <h2><%= (index + 1).toString() + ". " + player.username + " (Lvl. " + player.level + ")" %></h2>
+                                        <h3>Currency: <%= player.currency %></h3>
+                                        <p>Multiplier: <%= player.multiplier %></p>
+                                    </div>
+                                <% }); %>
+                            </div>
+                        <% } else { %>
+                            <p>No leaderboard data available currently.</p>
+                        <% } %>
+                    </div>
+                </div>
+            </div>
+        </main>
+
+        
+    </div>
+
+    <script>
+        function handleButtonClick(buttonId, coin) {
+            // Send a POST request to the server
+            fetch('/league/game/<%= leagueID %>', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+                body: JSON.stringify({
+                    buttonId: buttonId,
+                    price: coin,
+                }),
+            })
+                .then(response => {
+                    if (!response.ok) {
+                        throw new Error('Network response was not ok');
+                    }
+                    // Return the JSON parsed response for further processing
+                    return response.json();
+                })
+                .then(data => {
+                    // Check if the response indicates an error
+                    if (data.error) {
+                        // Show an alert or update the UI to inform the user of the error
+                        alert(data.error);
+                    } else {
+                        // Hide the button on successful response
+                        document.getElementById(buttonId).style.display = 'none';
+                    }
+                })
+                .catch(error => {
+                    console.error('Error:', error);
+                });
+        }
+
+        // Attach click event listeners to your buttons
+        document.getElementById('0.2').addEventListener('click', function () {
+            handleButtonClick('0.2', 500);
+        });
+
+        document.getElementById('1.0').addEventListener('click', function () {
+            handleButtonClick('1.0', 2500);
+        });
+
+        document.getElementById('level').addEventListener('click', function () {
+            handleButtonClick('level', 1000);
+        });
+
+        document.getElementById('0.1').addEventListener('click', function () {
+            handleButtonClick('0.1', 299);
+        });
+    </script>
+
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+</body>
+</html>

@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Create New League</title>
+    <link rel="stylesheet" href="./styles/createLeague.css">
+    <link href="https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <!-- NAVBAR SECTION -->
+
+    <nav class="navbar">
+        <div class="navbar__container">
+            <a href="/" id="navbar__logo">
+                <ion-icon name="body-outline"></ion-icon>
+                Volunteer League
+            </a>
+        </div>
+    </nav>
+
+    <!-- MAIN SECTION -->
+
+    <div class="main">
+        <div class="card">
+            <form action="" id="form">
+                <h1>Create League</h1>
+                <div class="input-box">
+                    <input type="text" id="leagueName" placeholder="League Name" required>
+                    <ion-icon name="people-circle-outline"></ion-icon>
+                </div>
+                <button type="submit" id="submit">Create</button>
+            </form>
+        </div>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const form = document.getElementById('form');
+            const league_name = document.getElementById('leagueName');
+
+            form.addEventListener('submit', async (event) => {
+                event.preventDefault();
+
+                const formData = { league_name: league_name.value }
+
+                // Make a POST request to /login
+                const response = await fetch('/createLeague', { 
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json'
+                    },
+                    body: JSON.stringify(formData)
+                });
+
+                if (response.ok) {
+                    const data = await response.json();
+                    const leagueID = data.leagueID;
+                    window.location.href = `/league/${leagueID}`
+                } else {
+                    console.log(`Error: ${error}`);
+                }
+            });
+
+
+
+        });
+
+
+
+
+
+    </script>
+
+
+
+
+    
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+</body>
+</html>

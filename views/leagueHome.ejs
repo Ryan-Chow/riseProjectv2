@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>League Home - <%= league_name %></title>
+    <link href="https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../styles/leagueHome.css">
+</head>
+<body>
+
+    <!-- NAVBAR -->
+
+    <nav class="navbar">
+        <div class="navbar__container">
+            <a href="/" id="navbar__logo">
+                <ion-icon name="body-outline"></ion-icon>
+                Volunteer League
+            </a>
+        </div>
+    </nav>
+
+
+
+    <div class="container">
+
+        <!-- SIDEBAR -->
+
+        <aside>
+            <div class="sidebar">
+                <a href="/league/<%= leagueID %>" class="active">
+                    <ion-icon name="grid"></ion-icon>
+                    <h3>Home</h3>
+                </a>
+                <a href="/league/discover/<%= leagueID %>">
+                    <ion-icon name="search"></ion-icon>
+                    <h3>Discover</h3>
+                </a>
+                <a href="/league/game/<%= leagueID %>">
+                    <ion-icon name="game-controller"></ion-icon>
+                    <h3>Quest</h3>
+                </a>
+                <a href="/league/members/<%= leagueID %>">
+                    <ion-icon name="people"></ion-icon>
+                    <h3>Members</h3>
+                </a>
+                <a href="/league/activity/<%= leagueID %>">
+                    <ion-icon name="analytics-outline"></ion-icon>
+                    <h3>Activity</h3>
+                </a>
+                <a href="" id=""> <!-- ADD DYNAMICNESS HERE FOR IF USER IS OWNER OR NOT -->
+                    <ion-icon name="cog"></ion-icon>
+                    <h3>League Settings</h3>
+                </a>
+                <a href="/league/ownerdashboard/<%= leagueID %>" id=""> <!-- ADD DYNAMICNESS HERE FOR IF USER IS OWNER OR NOT -->
+                    <ion-icon name="checkmark"></ion-icon>
+                    <h3>Approve Activity</h3>
+                </a>
+                <a href="/">
+                    <ion-icon name="log-out"></ion-icon>
+                    <h3>Personal Dashboard</h3>
+                </a>
+            </div>
+        </aside>
+
+        <!-- MAIN -->
+
+        <main>
+            <h1>League Home</h1>
+            <h3 class="leaguename"><%= league_name %></h3>
+            <div class="current-task">
+                <h2>Current Task</h2>
+                <% if (task[0].title) { %>
+                    <h3><%= task[0].title %></h3>
+                <% } %>
+                
+                <% if (task[0].description) { %>
+                    <p><%= task[0].description %>...</p>
+                <% } %>
+
+                <% if (task[0].link) { %>
+                    <a href="<%= task[0].link %>" id="taskdetails">More details</a>
+                <% } %>
+                <% if (task[0].title) { %>
+                    <button id="mark-complete-button" type="button">Mark as Complete</button>
+                <% } %>
+                <a href="/league/discover/<%= leagueID %>" class="find-new-task">Find New Task<a>
+            </div>
+            <div class="new-task">
+                <h2>Find Opportunities</h2>
+                <p>Current Filters: FILTER, FILTER, FILTER</p>
+                <div id="response">
+                    <button id="btn">Search</button>
+                    <a href="/filters" class="changeFilters">Change Filters</a>
+                </div>
+            </div>
+            <div class="league-board">
+                <h2>League Bulletin</h2>
+                <h3>Any task put forth by the League Manager will be displayed here.</h3>
+            </div>
+        </main>
+
+        <div class="activity">
+            <h2>Recent Activity</h2>
+            <ul>
+                <% activity.forEach(entry => { %>
+                  <li><%= entry.activity %> - <%= entry.formattedTimestamp %></li>
+                <% }); %>
+            </ul>
+            <a href="/league/activity"></a>
+        </div>
+    </div>
+
+    <script>
+        document.getElementById('btn').addEventListener('click', function() {
+            // Assuming leagueID is defined in your EJS template
+            var leagueID = '<%= leagueID %>';
+            
+            // Redirect to the specified URL
+            window.location.href = '/league/discover/' + leagueID;
+        });
+
+        document.getElementById('mark-complete-button').addEventListener('click', function () {
+            var title = '<%= task[0].title %>'; 
+            var button = document.getElementById('mark-complete-button')
+
+            button.style.display = 'none';
+
+            // Make a POST request using Fetch API
+            fetch('/league/<%= leagueID %>', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+                body: JSON.stringify({
+                    title: title,
+                }),
+            })
+                .then(response => {
+                    window.location.href('/league/discover/<%= leagueID %>')
+                })
+        });
+    </script>
+
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+</body>
+</html>

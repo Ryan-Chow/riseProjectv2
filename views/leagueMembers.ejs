@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>League Home - <%= league_name %></title>
+    <link href="https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="/styles/leagueMembers.css">
+</head>
+<body>
+
+    <!-- NAVBAR -->
+
+    <nav class="navbar">
+        <div class="navbar__container">
+            <a href="/" id="navbar__logo">
+                <ion-icon name="body-outline"></ion-icon>
+                Volunteer League
+            </a>
+        </div>
+    </nav>
+
+
+
+    <div class="container">
+
+        <!-- SIDEBAR -->
+
+        <aside>
+            <div class="sidebar">
+                <a href="/league/<%= leagueID %>">
+                    <ion-icon name="grid"></ion-icon>
+                    <h3>Home</h3>
+                </a>
+                <a href="/league/discover/<%= leagueID %>">
+                    <ion-icon name="search"></ion-icon>
+                    <h3>Discover</h3>
+                </a>
+                <a href="/league/game/<%= leagueID %>">
+                    <ion-icon name="game-controller"></ion-icon>
+                    <h3>Quest</h3>
+                </a>
+                <a href="/league/members/<%= leagueID %>" class="active">
+                    <ion-icon name="people"></ion-icon>
+                    <h3>Members</h3>
+                </a>
+                <a href="/league/activity/<%= leagueID %>">
+                    <ion-icon name="analytics-outline"></ion-icon>
+                    <h3>Activity</h3>
+                </a>
+                <a href="" id=""> <!-- ADD DYNAMICNESS HERE FOR IF USER IS OWNER OR NOT -->
+                    <ion-icon name="cog"></ion-icon>
+                    <h3>League Settings</h3>
+                </a>
+                <a href="/league/ownerdashboard/<%= leagueID %>" id=""> <!-- ADD DYNAMICNESS HERE FOR IF USER IS OWNER OR NOT -->
+                    <ion-icon name="checkmark"></ion-icon>
+                    <h3>Approve Activity</h3>
+                </a>
+                <a href="/">
+                    <ion-icon name="log-out"></ion-icon>
+                    <h3>Personal Dashboard</h3>
+                </a>
+            </div>
+        </aside>
+
+        <main>
+            <h1>Members</h1>
+            <div class="card-container">
+                <% members.forEach(entry => { %>
+                  <div class="member-card">
+                    <h3><%= entry.username %></h3>
+                    <p>Role: <%= entry.role %></p>
+                  </div>
+                <% }); %>
+              </div>
+        </main>
+    </div>
+
+
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+</body>
+</html>

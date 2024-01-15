@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Join League - <%= username %></title>
+    <link rel="stylesheet" href="styles/joinLeague.css">
+    <link href="https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <!-- NAVBAR SECTION -->
+
+    <nav class="navbar">
+        <div class="navbar__container">
+            <a href="/" id="navbar__logo">
+                <ion-icon name="body-outline"></ion-icon>
+                Volunteer League
+            </a>
+            <ul class="navbar__menu">
+                <li class="navbar__item">
+                    <a href="/filters.html" class="navbar__links">Opportunities</a>
+                </li>
+                <li class="navbar__item">
+                    <a href="/mission" class="navbar__links">Mission</a>
+                </li>
+                <li class="navbar__item">
+                    <a href="/leaderboard.html" class="navbar__links">Game</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <div class="main">
+        <div class="container">
+            <div class="profile-box">
+                <h3><%= username %></h3>
+                <p>Master Volunteer</p>
+            </div>
+            <div class="options-box">
+                <button id="find-public-league" class="button">Find Public League</button>
+                <button id="league-code" class="button">Enter League Code</button>
+                <input class="hidden" id="league-code-field" type="text" placeholder="League Code (e.g. ABCDEF)">
+                <!-- CREATE BUTTON FOR SUBMISSION -->
+            </div>
+        </div>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const findPubLeague = document.getElementById('find-public-league');
+            const useLeagueCode = document.getElementById('league-code');
+            const hidden = document.getElementById('league-code-field');
+
+            // Initial display state
+            hidden.style.display = 'none'
+            let isShowing = false;
+
+            useLeagueCode.addEventListener('click', () => {
+                // Toggle the hidden property
+                isShowing = !isShowing;
+                hidden.style.display = isShowing ? 'block' : 'none';
+            });
+        });
+    </script>
+
+
+
+    
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+
+</body>
+</html>

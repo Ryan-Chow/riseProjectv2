@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profile - <%= username %></title>
+    <link rel="stylesheet" href="../styles/profile.css">
+    <link href="https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <!-- NAVBAR SECTION -->
+
+    <nav class="navbar">
+        <div class="navbar__container">
+            <a href="/" id="navbar__logo">
+                <ion-icon name="body-outline"></ion-icon>
+                Volunteer League
+            </a>
+        </div>
+    </nav>
+
+    <!-- MAIN SECTION -->
+
+    <div class="main">
+        <div class="container">
+            <div class="card">
+                <div class="header">
+                    <a href="/" class="<%= personalTrue %>">
+                        <ion-icon name="cog"></ion-icon>
+                    </a>
+                </div>
+                <div class="box-main">
+                    <h3 class="name"><%= username %></h3>
+                    <p class="subname">Master Volunteer</p>
+                </div>
+                <div class="achievements">
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+</body>
+</html>

@@ -1,0 +1,176 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Kumbh Sans', sans-serif;
+}
+
+body {
+    background: url('/images/loginbackground.avif');
+    background-size: cover;
+    background-position: center;
+}
+
+/* Navbar, CSS */
+
+
+.navbar {
+    background: transparent;
+    border-bottom: 2px solid rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur(100px);
+    box-shadow: 0 0 10px rgba(0, 0, 0, .2);
+    height: 80px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.2rem;
+    position: sticky;
+    top: 0;
+    z-index: 999;
+}
+
+.navbar__container {
+    display: flex;
+    align-items: center;
+    height: 80px;
+    z-index: 1;
+    width: 100%;
+    max-width: 1300px;
+    margin: 0 auto;
+    padding: 0 50px;
+}
+
+#navbar__logo {
+    margin: 0 auto;
+    background-color: #ff8177;
+    color: #fe5448;
+    background-image: linear-gradient(to top, #ff0844 0%, #ffb119 100%);
+    background-size: 100%;
+    -webkit-background-clip: text;
+    -moz-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    -moz-text-fill-color: transparent;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    text-decoration: none;
+    font-size: 2rem;
+}
+
+/* Login Form, CSS */
+
+
+.main {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+.wrapper {
+    width: 420px;
+    background: transparent;
+    border: 2px solid rgba(255, 255, 255, .2);
+    backdrop-filter: blur(100px);
+    box-shadow: 0 0 10px rgba(0, 0, 0, .2);
+    color: #fff;
+    border-radius: 10px;
+    padding: 30px 40px;
+}
+
+.wrapper h1 {
+    font-size: 36px;
+    text-align: center;
+}
+
+.wrapper .input-box {
+    width: 100%;
+    height: 50px;
+    margin: 30px 0;
+}
+
+.input-box input {
+    width: 100%;
+    height: 100%;
+    background: transparent;
+    border: none;
+    outline: none;
+    border: 2px solid rgba(255, 255, 255, .2);
+    border-radius: 40px;
+    font-size: 1rem;
+    color: #fff;
+    padding: 20px 45px 20px 20px;
+}
+
+.input-box input::placeholder {
+    color: #fff;
+}
+
+.input-box ion-icon {
+    position: relative;
+    right: -300px;
+    transform: translateY(-175%);
+    font-size: 20px;
+}
+
+.wrapper .btn {
+    width: 100%;
+    height: 45px;
+    background: #fff;
+    border: none;
+    outline: none;
+    border-radius: 40px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, .1);
+    cursor: pointer;
+    font-size: 16px;
+    color: #333;
+    font-weight: 700;
+}
+
+.wrapper .signup {
+    font-size: 14.5px;
+    text-align: center;
+    margin: 20px 0 15px;
+}
+
+.signup p a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: 700;
+}
+
+.signup p a:hover {
+    text-decoration: underline;
+}
+
+#submit {
+    background: #ff8177;
+    background-image: linear-gradient(to top, #ff0844 0%, #ffb199 100%);
+    background-size: 100%;
+}
+
+#submit:hover {
+    transform: scale(1.05);
+    transition: 0.2s ease-in;
+    cursor: pointer;
+    content: '';
+    background: linear-gradient(to top, #b721ff 0%, #21d4fd 100%);
+    box-shadow: 0 0 10px rgba(0, 0, 0, .1);
+    transition: all 0.35s;
+}
+
+.hidden {
+    display: none; /* Initially hide the error message */
+    background-color: red;
+    margin: 10px;
+    margin-bottom: 20px;
+    border-radius: 4px;
+    border: 40px;
+    height: 20px;
+    color: #fff;    /* Optionally style the error message */
+}
+
+.hidden p {
+    margin: 0 10px;
+}

@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Discover - <%= league_name %></title>
+    <link href="https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="/styles/findOpportunities.css">
+
+</head>
+<body>
+
+    <!-- NAVBAR -->
+
+    <nav class="navbar">
+        <div class="navbar__container">
+            <a href="/" id="navbar__logo">
+                <ion-icon name="body-outline"></ion-icon>
+                Volunteer League
+            </a>
+        </div>
+    </nav>
+
+
+    <div class="container">
+
+        <!-- SIDEBAR -->
+
+        <aside>
+            <div class="sidebar">
+                <a href="/league/<%= leagueID %>" >
+                    <ion-icon name="grid"></ion-icon>
+                    <h3>Home</h3>
+                </a>
+                <a href="/league/discover/<%= leagueID %>" class="active">
+                    <ion-icon name="search"></ion-icon>
+                    <h3>Discover</h3>
+                </a>
+                <a href="/league/game/<%= leagueID %>">
+                    <ion-icon name="game-controller"></ion-icon>
+                    <h3>Quest</h3>
+                </a>
+                <a href="/league/members/<%= leagueID %>">
+                    <ion-icon name="people"></ion-icon>
+                    <h3>Members</h3>
+                </a>
+                <a href="/league/activity/<%= leagueID %>">
+                    <ion-icon name="analytics-outline"></ion-icon>
+                    <h3>Activity</h3>
+                </a>
+                <a href="" id=""> <!-- ADD DYNAMICNESS HERE FOR IF USER IS OWNER OR NOT -->
+                    <ion-icon name="cog"></ion-icon>
+                    <h3>League Settings</h3>
+                </a>
+                <a href="/league/ownerdashboard/<%= leagueID %>" id=""> <!-- ADD DYNAMICNESS HERE FOR IF USER IS OWNER OR NOT -->
+                    <ion-icon name="checkmark"></ion-icon>
+                    <h3>Approve Activity</h3>
+                </a>
+                <a href="/">
+                    <ion-icon name="log-out"></ion-icon>
+                    <h3>Personal Dashboard</h3>
+                </a>
+            </div>
+        </aside>
+
+        <main>
+            <h1>Discover Opportunities</h1>
+            <h3 class="leaguename"><%= league_name %></h3>
+            <% for (let i = 0; i < opportunities.length; i++) { %>
+                <div class="opportunity-card" id="test-opp-card">
+                    <h1>
+                        <a href="#" class="opportunity-link">
+                            California Host Families for Amazing Exchange Students (San Francisco Metro)
+                        </a>
+                    </h1>
+                    <p>Cause: Education</p>
+                    <p>Skills: N/A</p>
+                    <p>Virtual: False (In-Person)</p>
+                    <p>Description: Ready to have a fun experience?
+                        Ready to enjoy some cultural diversity?
+                        Ready to get inspired?...</p>
+                    <p>Date Posted: 1/5/2024</p>
+                    </div>
+              <div class="opportunity-card">
+                <h1>
+                    <a href="#" class="opportunity-link"
+                       data-opportunity-id="<%= opportunities[i].id %>"
+                       data-opportunity-title="<%= opportunities[i].title %>"
+                       data-opportunity-description="<%= opportunities[i].description %>"
+                       data-opportunity-href="<%= opportunities[i].href %>">
+                       <%= opportunities[i].title %>
+                    </a>
+                </h1>
+                <p>Cause: <%= opportunities[i].cause %></p>
+                <p>Skills: <%= opportunities[i].skills %></p>
+                <p>Virtual: <%= opportunities[i].virtual %></p>
+                <p>Description: <%= opportunities[i].description %>...</p>
+                <p><%= opportunities[i].date_posted %></p>
+              </div>
+            <% } %>
+        </main>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            // Add an event listener for all elements with the class "opportunity-link"
+            document.querySelectorAll('.opportunity-link').forEach(function (link) {
+                link.addEventListener('click', function (event) {
+                    
+                    event.preventDefault(); // Prevent the default behavior of the link
+    
+                    const opportunityId = link.dataset.opportunityId;
+                    const opportunityTitle = link.dataset.opportunityTitle;
+                    const opportunityDescription = link.dataset.opportunityDescription;
+                    const opportunityHref = link.dataset.opportunityHref;
+    
+                    // Make a POST request using Fetch API
+                    fetch(`/league/discover/<%= leagueID %>`, {
+                        method: 'POST',
+                        headers: {
+                            'Content-Type': 'application/json',
+                        },
+                        body: JSON.stringify({
+                            title: opportunityTitle,
+                            description: opportunityDescription,
+                            link: opportunityHref
+                        }),
+                    })
+                    .then(response => response.json())
+                    .then(data => {
+                        console.log('Success:', data);
+                    })
+                    .catch(error => {
+                        console.error('Error:', error);
+                    });
+                });
+            });
+        });
+    </script>
+
+
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+</body>
+</html>
